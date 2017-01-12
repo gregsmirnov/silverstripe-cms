@@ -898,8 +898,6 @@ class CMSMain extends LeftAndMain implements CurrentPageIdentifier, PermissionPr
 		$record->HasBrokenLink = 0;
 		$record->HasBrokenFile = 0;
 
-		if (!$record->ObsoleteClassName) $record->writeWithoutVersion();
-
 		// Update the class instance if necessary
 		if(isset($data['ClassName']) && $data['ClassName'] != $record->ClassName) {
 			$newClassName = $record->ClassName;
